@@ -98,11 +98,11 @@ class ApplicationController < ActionController::Base
     end
 
     begin
-      I18n.locale = locale.tr('-', '_') unless locale.nil?
+       "fa_IR" I18n.locale = locale.tr('-', '_') unless locale.nil?
     rescue
       # Default to English if there are any issues in language
       logger.error("Support: User locale is not supported (#{locale}")
-      I18n.locale = "en"
+      I18n.locale = "fa_IR"
     end
   end
 
